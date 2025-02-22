@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -202,12 +204,25 @@ const menuData = [
 ];
 export default function Home() {
     useEffect(() => {
-      AOS.init({ duration: 1250 });
+        AOS.init({ duration: 1250 });
     }, []);
 
     return (
+        
         <div className="bg-gray-50 min-h-screen font-sans text-gray-900">
             <main className="max-w-5xl mx-auto px-6 py-10">
+                <div className="fixed top-0 left-0 w-full h-screen -z-10">
+                    <Image
+                        src="/placeholder.jpg"
+                        alt="Mr. Pig Korean BBQ"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                </div>
+                <br />
+                <br />
+                <br />
                 <h1 className="text-5xl font-bold mb-8 text-center">Our Menu</h1>
                 {menuData.map((category, idx) => (
                     <div key={idx} className="mb-10">

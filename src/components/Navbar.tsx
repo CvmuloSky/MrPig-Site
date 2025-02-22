@@ -8,27 +8,37 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="bg-white shadow-md fixed top-0 w-full z-50">
-                <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <nav className="relative opacity-70 shadow-md z-50 bg-black">
+                <div className="w-full px-12 py-4 flex justify-between items-center">
                     <Link href="/" legacyBehavior>
-                        <a className="text-3xl font-bold text-red-600">
+                        <a className="text-3xl font-bold text-white">
                             Mr. Pig Korean BBQ
                         </a>
                     </Link>
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex space-x-8">
-                        <Link href="/" legacyBehavior>
-                            <a className="text-lg hover:text-red-600 transition-colors">
-                                Home
+                    <div className="hidden md:flex space-x-8 text-white">
+                        <Link href="/reservations" legacyBehavior>
+                            <a className="text-lg hover:text-green-500 transition-colors">
+                                Reservations
                             </a>
                         </Link>
+                        <Link href="/hoursandloc" legacyBehavior>
+                            <a className="text-lg hover:text-green-500 transition-colors">
+                                Hours & Location
+                            </a>
+                        </Link> 
                         <Link href="/menu" legacyBehavior>
-                            <a className="text-lg hover:text-red-600 transition-colors">
+                            <a className="text-lg hover:text-green-500 transition-colors">
                                 Menu
                             </a>
                         </Link>
+                        <Link href="/events" legacyBehavior>
+                            <a className="text-lg hover:text-green-500 transition-colors">
+                                Events
+                            </a>
+                        </Link>
                         <Link href="/contact" legacyBehavior>
-                            <a className="text-lg hover:text-red-600 transition-colors">
+                            <a className="text-lg hover:text-green-500 transition-colors">
                                 Contact Us
                             </a>
                         </Link>
@@ -64,7 +74,7 @@ export default function Navbar() {
                                 <Link href="/" legacyBehavior>
                                     <a
                                         onClick={() => setIsMenuOpen(false)}
-                                        className="block text-lg hover:text-red-600 transition-colors"
+                                        className="block text-lg hover:text-green-500 transition-colors"
                                     >
                                         Home
                                     </a>
@@ -74,7 +84,7 @@ export default function Navbar() {
                                 <Link href="/menu" legacyBehavior>
                                     <a
                                         onClick={() => setIsMenuOpen(false)}
-                                        className="block text-lg hover:text-red-600 transition-colors"
+                                        className="block text-lg hover:text-green-500 transition-colors"
                                     >
                                         Menu
                                     </a>
@@ -84,7 +94,7 @@ export default function Navbar() {
                                 <Link href="/#contact" legacyBehavior>
                                     <a
                                         onClick={() => setIsMenuOpen(false)}
-                                        className="block text-lg hover:text-red-600 transition-colors"
+                                        className="block text-lg hover:text-green-500 transition-colors"
                                     >
                                         Contact Us
                                     </a>
@@ -94,7 +104,7 @@ export default function Navbar() {
                     </div>
                 )}
             </nav>
-            {/* Spacer to offset the fixed navbar */}
+            {/* Spacer to offset the navbar */}
             <div className="h-20"></div>
         </>
     );
