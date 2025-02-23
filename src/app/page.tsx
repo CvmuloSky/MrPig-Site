@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 
 export default function Home() {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ once: true, duration: 1000 });
   }, []);
 
   return (
@@ -28,19 +28,17 @@ export default function Home() {
       <div className="fixed top-0 left-0 w-full h-screen -z-5 bg-black opacity-50"></div>
 
       {/* Hero Section */}
-{/* Hero Section */}
-<section className="relative w-full h-screen flex flex-col items-center justify-center text-center px-4 mt-[-100px]">
-    <h1 className="text-8xl font-extrabold mb-4" data-aos="fade-up">
-        Mr. Pig Korean BBQ
-    </h1>
-    <h1 className="text-4xl font-bold mb-4" data-aos="fade-up">
-        Korean Barbecue Restaurant
-    </h1>
-</section>
-
+      <section className="relative w-full h-screen flex flex-col items-center justify-center text-center px-4 mt-[-100px]">
+        <h1 className="text-8xl font-extrabold mb-4" data-aos="fade-up">
+          Mr. Pig Korean BBQ
+        </h1>
+        <h1 className="text-4xl font-bold mb-4" data-aos="fade-up">
+          Korean Barbecue Restaurant
+        </h1>
+      </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-white relative">
+      <section id="about" className="py-20  relative">
         <div className="max-w-5xl mx-auto px-6 text-center about" data-aos="fade-up">
           <h2 className="text-4xl font-bold mb-8">YOUR NEXT MEAL DESTINATION</h2>
           <p className="text-xl leading-relaxed max-w-3xl mx-auto mb-6">
@@ -74,11 +72,11 @@ export default function Home() {
           <br />
           <Link
             href="/menu"
-            className="mt-8 px-8 py-4 bg-red-600 rounded-full text-xl font-semibold hover:bg-red-700 transition-colors"
+            className="mt-8 px-8 py-3 bg-red-600 rounded-full text-xl font-semibold hover:bg-red-700 transition-colors"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            View Full Menu
+            MENU
           </Link>
           <br />
           <br />

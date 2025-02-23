@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -35,7 +34,14 @@ export default function Home() {
                 <h1 className="text-2xl font-bold mb-4" data-aos="fade-up">
                     <br />
                     As you prepare for your visit, please review the information<br />below to secure your reservation and understand the waitlist procedures.
-                    <br /><br /><br /><center><button className="button" data-aos="fade-up"><span>Reserve Now </span></button><br /><br /><br /></center>
+                    <center><br /><br /><br />
+                        <a href="https://www.yelp.com/reservations/mr-pig-korean-bbq-philadelphia?source=yelp_biz&date=2025-02-22&time=1900&covers=2">
+                            <button className="button" data-aos="fade-up">
+                                <span>Reserve Now</span>
+                            </button>
+                        </a>
+                    </center>
+
                 </h1>
             </section>
             <hr />

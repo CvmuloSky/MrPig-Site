@@ -11,35 +11,30 @@ export default function Navbar() {
             <nav className="relative opacity-70 shadow-md z-50 bg-black">
                 <div className="w-full px-12 py-4 flex justify-between items-center">
                     <Link href="/" legacyBehavior>
-                        <a className="text-3xl font-bold text-white">
+                        <a id="navbarlink" className="text-3xl font-bold text-white">
                             Mr. Pig Korean BBQ
                         </a>
                     </Link>
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex space-x-8 text-white">
                         <Link href="/reservations" legacyBehavior>
-                            <a className="text-lg hover:text-green-500 transition-colors">
-                                Reservations
+                            <a className="text-lg transition-colors">
+                                RESERVE YOUR SEAT!
                             </a>
                         </Link>
                         <Link href="/hoursandloc" legacyBehavior>
-                            <a className="text-lg hover:text-green-500 transition-colors">
-                                Hours & Location
+                            <a className="text-lg transition-colors">
+                                HOURS AND LOCATION
                             </a>
                         </Link> 
                         <Link href="/menu" legacyBehavior>
-                            <a className="text-lg hover:text-green-500 transition-colors">
-                                Menu
-                            </a>
-                        </Link>
-                        <Link href="/events" legacyBehavior>
-                            <a className="text-lg hover:text-green-500 transition-colors">
-                                Events
+                            <a className="text-lg transition-colors">
+                                MENU
                             </a>
                         </Link>
                         <Link href="/contact" legacyBehavior>
-                            <a className="text-lg hover:text-green-500 transition-colors">
-                                Contact Us
+                            <a className="text-lg transition-colors">
+                                CONTACT US
                             </a>
                         </Link>
                     </div>
@@ -74,7 +69,7 @@ export default function Navbar() {
                                 <Link href="/" legacyBehavior>
                                     <a
                                         onClick={() => setIsMenuOpen(false)}
-                                        className="block text-lg hover:text-green-500 transition-colors"
+                                        className="block text-lg transition-colors"
                                     >
                                         Home
                                     </a>
@@ -84,7 +79,7 @@ export default function Navbar() {
                                 <Link href="/menu" legacyBehavior>
                                     <a
                                         onClick={() => setIsMenuOpen(false)}
-                                        className="block text-lg hover:text-green-500 transition-colors"
+                                        className="block text-lg transition-colors"
                                     >
                                         Menu
                                     </a>
@@ -94,7 +89,7 @@ export default function Navbar() {
                                 <Link href="/#contact" legacyBehavior>
                                     <a
                                         onClick={() => setIsMenuOpen(false)}
-                                        className="block text-lg hover:text-green-500 transition-colors"
+                                        className="block text-lg transition-colors"
                                     >
                                         Contact Us
                                     </a>
