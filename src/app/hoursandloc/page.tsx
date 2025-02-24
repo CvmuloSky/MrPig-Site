@@ -24,7 +24,7 @@ export default function Home() {
             </div>
 
             {/* Tint Overlay */}
-            <div className="fixed top-0 left-0 w-full h-3/4 -z-5 bg-black opacity-50"></div>
+            <div className="fixed top-0 left-0 w-full h-3/4 -z-5 bg-black opacity-75"></div>
 
             {/* Hero Section */}
             <section className="relative w-full h-screen flex flex-col items-center justify-center text-center px-4 mt-[-100px] md:mt-[-150px] lg:mt-[-200px]">
@@ -36,10 +36,10 @@ export default function Home() {
             <hr />
 
             {/* Location & Hours Section */}
-            <section className="py-20 bg-white relative mt-[-50px] md:mt-[-100px] lg:mt-[-150px]">
+            <section className="py-20 bg-black relative mt-[-100px] md:mt-[-150px] lg:mt-[-200px]">
                 <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                     {/* Location Section */}
-                    <div data-aos="fade-right" className="text-center md:text-left">
+                    <div data-aos="fade-right" className="text-center md:text-center">
                         <h2 id="heading" className="text-yellow-300 text-3xl font-bold mb-4">Location</h2>
                         <div className="flex justify-center md:justify-start">
                             <iframe
@@ -54,13 +54,13 @@ export default function Home() {
                     </div>
 
                     {/* Hours Section */}
-                    <div data-aos="fade-left" className="text-center md:text-left">
+                    <div data-aos="fade-left" className="text-center md:text-center">
                         <h2 id="heading" className="text-3xl font-bold mb-4">Hours</h2>
-                        <ul id="time" className="text-lg leading-relaxed bg-gray-100 p-6 rounded-lg shadow-md inline-block">
-                            <li><strong>Monday – Thursday:</strong> 11:30 AM – 10:00 PM</li>
-                            <li><strong>Friday:</strong> 11:30 AM – 11:00 PM</li>
-                            <li><strong>Saturday:</strong> 12:00 PM – 11:00 PM</li>
-                            <li><strong>Sunday:</strong> 12:00 PM – 10:00 PM</li>
+                        <ul id="time" className="text-lg leading-relaxed bg-gray-800 p-6 rounded-lg shadow-md inline-block">
+                            <li><strong>Monday – Thursday: 11:30 AM – 10:00 PM</strong></li><br/>
+                            <li><strong>Friday: 11:30 AM – 11:00 PM</strong></li><br/>
+                            <li><strong>Saturday: 12:00 PM – 11:00 PM</strong></li><br/>
+                            <li><strong>Sunday: 12:00 PM – 10:00 PM</strong></li>
                         </ul>
                     </div>
                 </div>

@@ -65,15 +65,6 @@ export default function AnimatedFooter() {
                     </div>
                 </div>
                 <hr className="my-6 sm:mx-auto lg:my-8 border-white" />
-                <div className="sm:flex sm:items-center sm:justify-between text-center sm:text-left">
-                    <span className="text-sm">
-                        © {new Date().getFullYear()} 
-                        <Link href="/" legacyBehavior>
-                            <a className="hover:underline"> Mr. Pig Korean BBQ</a>
-                        </Link>
-                        . All Rights Reserved.
-                    </span>
-                </div>
             </div>
         </footer>
     );

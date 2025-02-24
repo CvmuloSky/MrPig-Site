@@ -2,10 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #171717;
+  --foreground: #ffffff;
+}
+
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+p {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h2 {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+li {
+  font-family: 'Courier New', Courier, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,13 +31,13 @@
 }
 
 body {
-  color: #c2bb6d;
+  color: #de0a0a;
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .about {
-  color: #c2bb6d;
+  color: #de0a0a;
 }
 
 .switch {
@@ -89,7 +104,7 @@ input:checked+.slider:before {
   display: inline-block;
   border-radius: 20px;
   background-color: #ffffff;
-  color: #c2bb6d;
+  color: #de0a0a;
   text-align: center;
   font-size: 20px;
   padding: 5px;
@@ -97,7 +112,7 @@ input:checked+.slider:before {
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
-  border: 2px solid #c2bb6d;
+  border: 2px solid #de0a0a;
 }
 
 .button span {
@@ -126,7 +141,7 @@ input:checked+.slider:before {
 }
 
 footer {
-  background-color: #c2bb6d;
+  background-color: #de0a0a;
 }
 
 iframe {
@@ -136,9 +151,18 @@ iframe {
 }
 
 #time {
-  color:#c2bb6d;
+  color: #de0a0a;
 }
 
 #heading {
-  color: #c2bb6d
+  color: #de0a0a
+}
+
+#navbarlink {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#navbarlink:hover {
+  color: #ff6666;
+  transition: color 0.3s ease-in-out;
 }

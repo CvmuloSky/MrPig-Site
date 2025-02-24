@@ -208,7 +208,7 @@ export default function Home() {
 
     return (
         
-        <div className="bg-gray-50 min-h-screen font-sans text-gray-900">
+        <div className="bg-black min-h-screen font-sans text-white">
             <main className="max-w-5xl mx-auto px-6 py-10">
                 <div className="fixed top-0 left-0 w-full h-screen -z-10">
                     <Image
@@ -238,7 +238,7 @@ export default function Home() {
                                     </div>
                                     <div className="mt-4 md:mt-0 md:ml-6 flex-1">
                                         <h3 className="text-xl font-bold" data-aos="fade-up">{item.name}</h3>
-                                        <p className="text-gray-700" data-aos="fade-up">{item.description}</p>
+                                        <p className="text-white" data-aos="fade-up">{item.description}</p>
                                     </div>
                                     <div className="mt-4 md:mt-0">
                                         <p className="text-xl font-semibold" data-aos="fade-up">{item.price}</p>

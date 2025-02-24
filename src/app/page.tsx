@@ -38,7 +38,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20  relative">
+      <section id="about" className="py-20 bg-white relative">
         <div className="max-w-5xl mx-auto px-6 text-center about" data-aos="fade-up">
           <h2 className="text-4xl font-bold mb-8">YOUR NEXT MEAL DESTINATION</h2>
           <p className="text-xl leading-relaxed max-w-3xl mx-auto mb-6">
@@ -59,6 +59,26 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-20 bg-white relative mt-[-50px] md:mt-[-100px] lg:mt-[-150px]">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          {/* Location Section */}
+          <div data-aos="fade-right" className="text-center md:text-center">
+            <h2 id="heading" className="text-3xl font-bold mb-4">Rating</h2>
+            <p id="time" className="text-lg leading-relaxed bg-gray-100 p-6 rounded-lg shadow-md inline-block">
+
+            </p>
+          </div>
+
+          {/* Hours Section */}
+          <div data-aos="fade-left" className="text-center md:text-center">
+            <h2 id="heading" className="text-3xl font-bold mb-4">Reviews</h2>
+            <p id="time" className="text-lg leading-relaxed bg-gray-100 p-6 rounded-lg shadow-md inline-block">
+
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section id="menu" className="py-20 relative">
         <h1 className="text-5xl font-bold mb-8 text-center" data-aos="fade-up">
           <br />
@@ -69,12 +89,10 @@ export default function Home() {
           <br />
           Its Time to Eat!
           <br />
-          <br />
           <Link
             href="/menu"
-            className="mt-8 px-8 py-3 bg-red-600 rounded-full text-xl font-semibold hover:bg-red-700 transition-colors"
+            className="mt-8 px-8 py-2 bg-clip-padding bg-red-600 rounded-full text-xl font-semibold hover:bg-red-700 transition-colors"
             data-aos="fade-up"
-            data-aos-delay="200"
           >
             MENU
           </Link>

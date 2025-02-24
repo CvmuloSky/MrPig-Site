@@ -18,22 +18,22 @@ export default function Navbar() {
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex space-x-8 text-white">
                         <Link href="/reservations" legacyBehavior>
-                            <a className="text-lg transition-colors">
+                            <a id="navbarlink" className="text-lg transition-colors">
                                 RESERVE YOUR SEAT!
                             </a>
                         </Link>
                         <Link href="/hoursandloc" legacyBehavior>
-                            <a className="text-lg transition-colors">
+                            <a id="navbarlink" className="text-lg transition-colors">
                                 HOURS AND LOCATION
                             </a>
                         </Link> 
                         <Link href="/menu" legacyBehavior>
-                            <a className="text-lg transition-colors">
+                            <a id="navbarlink" className="text-lg transition-colors">
                                 MENU
                             </a>
                         </Link>
                         <Link href="/contact" legacyBehavior>
-                            <a className="text-lg transition-colors">
+                            <a id="navbarlink" className="text-lg transition-colors">
                                 CONTACT US
                             </a>
                         </Link>
