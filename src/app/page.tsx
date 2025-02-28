@@ -2,13 +2,44 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function Home() {
+  interface Review {
+    user: {
+      name: string;
+    };
+    text: string;
+  }
+
+  const [reviews, setReviews] = useState<Review[]>([]);
+  const [rating, setRating] = useState<number | null>(null);
+
   useEffect(() => {
     AOS.init({ once: true, duration: 1000 });
+
+    // Fetch Yelp data
+    const fetchYelpData = async () => {
+      try {
+        const response = await fetch("/api/yelp");
+        const data = await response.json();
+
+        if (data.error) {
+          console.error("Error fetching Yelp data", data.error);
+          return;
+        }
+
+        // Set the reviews and rating
+        setReviews(data.reviews);
+        setRating(data.business.rating);
+      } catch (error) {
+        console.error("Error fetching Yelp data:", error);
+      }
+    };
+
+    fetchYelpData();
   }, []);
 
   return (
@@ -38,7 +69,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-white relative">
+      <section id="about" className="py-20 bg-black relative">
         <div className="max-w-5xl mx-auto px-6 text-center about" data-aos="fade-up">
           <h2 className="text-4xl font-bold mb-8">YOUR NEXT MEAL DESTINATION</h2>
           <p className="text-xl leading-relaxed max-w-3xl mx-auto mb-6">
@@ -59,26 +90,41 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-white relative mt-[-50px] md:mt-[-100px] lg:mt-[-150px]">
+      {/* Reviews Section */}
+      <section className="py-20 bg-black relative mt-[-50px] md:mt-[-100px] lg:mt-[-150px]">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          {/* Location Section */}
+          {/* Rating Section */}
           <div data-aos="fade-right" className="text-center md:text-center">
-            <h2 id="heading" className="text-3xl font-bold mb-4">Rating</h2>
-            <p id="time" className="text-lg leading-relaxed bg-gray-100 p-6 rounded-lg shadow-md inline-block">
-
+            <h2 className="text-3xl font-bold mb-4">Rating</h2>
+            <p className="text-lg leading-relaxed bg-gray-900 p-6 rounded-lg shadow-md inline-block">
+              {rating ? (
+                <span>Rating: {rating}</span>
+              ) : (
+                <span>Loading Rating...</span>
+              )}
             </p>
           </div>
 
-          {/* Hours Section */}
+          {/* Reviews Section */}
           <div data-aos="fade-left" className="text-center md:text-center">
-            <h2 id="heading" className="text-3xl font-bold mb-4">Reviews</h2>
-            <p id="time" className="text-lg leading-relaxed bg-gray-100 p-6 rounded-lg shadow-md inline-block">
-
-            </p>
+            <h2 className="text-3xl font-bold mb-4">Reviews</h2>
+            {reviews.length > 0 ? (
+              <div className="bg-gray-900 p-6 rounded-lg shadow-md">
+                {reviews.slice(0, 3).map((review, index) => (
+                  <div key={index} className="mb-4">
+                    <p className="font-semibold">{review.user.name}</p>
+                    <p className="text-sm">{review.text}</p>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p>Loading Reviews...</p>
+            )}
           </div>
         </div>
       </section>
 
+      {/* Menu Section */}
       <section id="menu" className="py-20 relative">
         <h1 className="text-5xl font-bold mb-8 text-center" data-aos="fade-up">
           <br />

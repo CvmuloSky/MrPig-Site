@@ -1,10 +1,21 @@
-import axios from "axios";
+// pages/api/yelp.js
 
-const APIKEY = process.env.yelpAPIKEY
-const baseURL = "https://api.yelp.com/v3/businesses/"
+import axios from 'axios';
 
-function getYelpData() {
-    
+export default async function handler(req, res) {
+    try {
+        const businessId = 'mr-pig-korean-bbq-philadelphia'; 
+        const response = await axios.get(
+            `https://api.yelp.com/v3/businesses/${businessId}/reviews`,
+            {
+                headers: {
+                    Authorization: `Bearer ${process.env.yelpAPIKEY}`,
+                },
+            }
+        );
+        res.status(200).json(response.data);
+    } catch (error) {
+        console.error('Error fetching Yelp data:', error);
+        res.status(500).json({ error: 'Failed to fetch data from Yelp' });
+    }
 }
-
-console.log(APIKEY)
